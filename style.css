@@ -262,12 +262,16 @@ section.is-visible, footer.is-visible { opacity: 1; transform: translateY(0); }
     /* --- Globale Schriftanpassungen für Mobile --- */
     h1 { font-size: 2.8rem; }
     h2, .about-intro h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
     .logo { font-size: 1.2rem; }
     p, .experience-item li, .stack-category li { font-size: 0.95rem; }
-    .experience-item h3 { font-size: 1.6rem; }
-    .kpi-value { font-size: 2rem; }
+    .kpi-value { font-size: 1.8rem; }
     .kpi-label { font-size: 0.9rem; }
+
+    /* --- Spezifische Anpassungen für Karten-Überschriften --- */
+    .experience-item h3,
+    .step-content h3 {
+        font-size: 1.4rem;
+    }
 
 
     nav { flex-direction: column; align-items: center; gap: 1.5rem; }
