@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Lexend:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
+
 /* =================================================================
    Neo-Brutalist Inspired Theme - Finale Version
    ================================================================= */
@@ -9,9 +11,9 @@
     --color-background-card: #FFFFFF;
     --color-accent: #EFFF0B;
     --color-border: #111111;
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Manrope', sans-serif;
-    --font-mono: 'Space Mono', monospace;
+    --font-heading: 'Lexend', sans-serif;
+    --font-body: 'Figtree', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
     --transition-fast: 0.2s ease-out;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -97,7 +99,7 @@ p { line-height: 1.6; max-width: 65ch; font-size: 1rem; }
 }
 .feature-item p {
     font-size: 0.95rem;
-    color: #555;
+    color: var(--color-text);
     line-height: 1.6;
     margin: 0 auto;
 }
