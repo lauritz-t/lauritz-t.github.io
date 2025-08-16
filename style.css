@@ -1,0 +1,280 @@
+/* =================================================================
+   Neo-Brutalist Inspired Theme - Finale Version
+   ================================================================= */
+
+/* --- 1. Globale Variablen & Basis-Setup --- */
+:root {
+    --color-background: #F4F4F4;
+    --color-text: #111111;
+    --color-background-card: #FFFFFF;
+    --color-accent: #EFFF0B;
+    --color-border: #111111;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --transition-fast: 0.2s ease-out;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { font-family: var(--font-body); background-color: var(--color-background); color: var(--color-text); -webkit-font-smoothing: antialiased; }
+
+/* --- 2. Layout & Container --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+/* --- 3. Header & Navigation --- */
+header { background-color: rgba(244, 244, 244, 0.8); backdrop-filter: blur(10px); border-bottom: 2px solid var(--color-border); padding: 1.5rem 0; position: sticky; top: 0; z-index: 100; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-text); text-decoration: none; }
+nav ul { list-style: none; display: flex; gap: 2rem; }
+nav ul li a { font-family: var(--font-mono); text-decoration: none; color: var(--color-text); font-weight: 600; transition: background-color var(--transition-fast); }
+nav ul li a:hover, nav ul li a.active { background-color: var(--color-accent); }
+
+/* --- 4. Sektionen & Typografie --- */
+section { padding: 6rem 0; border-bottom: 2px solid var(--color-border); }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; }
+h1 { font-size: 4.5rem; }
+h2 { font-size: 3rem; margin-bottom: 3rem; text-align: center; }
+p { line-height: 1.6; max-width: 65ch; }
+.label { font-family: var(--font-mono); font-weight: 600; color: var(--color-text); margin-bottom: 1rem; display: block; }
+
+/* --- 5. Brutalist-UI-Elemente --- */
+.brutalist-button { display: inline-block; font-family: var(--font-heading); font-weight: 700; text-decoration: none; color: var(--color-text); background-color: var(--color-accent); padding: 1rem 2rem; border: 2px solid var(--color-border); box-shadow: 5px 5px 0px var(--color-border); transition: all var(--transition-fast); }
+.brutalist-button:hover { box-shadow: 2px 2px 0px var(--color-border); transform: translate(3px, 3px); }
+
+/* --- 6. Spezifische Sektionen-Layouts --- */
+/* 6a. Hero */
+#hero { padding: 6rem 0; text-align: left; }
+.hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+
+/* 6b. About Neu */
+#about-neu {
+    padding: 4rem 0;
+}
+.about-intro {
+    text-align: center;
+    max-width: 70ch;
+    margin: 0 auto 4rem auto;
+}
+.about-intro h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+.feature-item {
+    background: var(--color-background-card);
+    padding: 2rem;
+    border: 2px solid var(--color-border);
+    box-shadow: 5px 5px 0px var(--color-border);
+    transition: all var(--transition-fast);
+}
+.feature-item:hover {
+    box-shadow: 2px 2px 0px var(--color-border);
+    transform: translate(3px, 3px);
+}
+.feature-icon {
+    margin: 0 auto 1.5rem auto;
+    background: var(--color-accent);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-border);
+}
+.feature-icon svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--color-text);
+}
+.feature-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.feature-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* 6c. Lifecycle / Roadmap */
+.lifecycle-process { position: relative; margin-top: 4rem; }
+.lifecycle-process::before { content: ''; position: absolute; top: 1rem; bottom: 1rem; left: 21px; width: 3px; background-color: var(--color-border); z-index: 1; }
+.lifecycle-step { position: relative; padding-left: 80px; margin-bottom: 2rem; }
+.step-counter { position: absolute; left: 0; top: 0; width: 44px; height: 44px; background-color: var(--color-accent); border: 2px solid var(--color-border); z-index: 2; font-family: var(--font-mono); font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; }
+.step-content { background-color: var(--color-background-card); border: 2px solid var(--color-border); padding: 2rem; box-shadow: 5px 5px 0px var(--color-border); transition: all var(--transition-fast); }
+.step-content:hover { box-shadow: 2px 2px 0px var(--color-border); transform: translate(3px, 3px); }
+.step-content h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+/* 6d. Tech Stack */
+#tech-stack {
+    background-color: var(--color-text);
+    color: var(--color-background);
+}
+#tech-stack h2 {
+    color: var(--color-background);
+}
+.stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; text-align: left; }
+.stack-title {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-background);
+}
+.stack-category ul { list-style: none; padding: 0; }
+.stack-category li { font-size: 1.1rem; margin-bottom: 0.8rem; position: relative; padding-left: 25px; }
+.stack-category li::before { content: '■'; position: absolute; left: 0; top: -2px; color: var(--color-accent); font-size: 1rem; }
+.stack-category li.group-start { margin-top: 1.5rem; }
+
+
+/* --- 7. Footer --- */
+footer {
+    padding: 3rem 0;
+    text-align: center;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.social-links a {
+    display: flex;
+    align-items: center;
+    color: var(--color-text);
+}
+.social-links svg {
+    height: 26px;
+    width: 26px;
+    transition: color var(--transition-fast);
+}
+.social-links a:hover {
+    color: #0077B5; /* Official LinkedIn color */
+}
+footer .legal-links a {
+    font-family: var(--font-mono);
+    margin: 0 0.5rem;
+    color: #555;
+    text-decoration: underline;
+}
+
+/* --- 8. Animationen & Responsivität --- */
+section, footer { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+section.is-visible, footer.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+    footer .container { flex-direction: column; gap: 1.5rem; }
+}
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    h2, .about-intro h2 { font-size: 2.2rem; }
+    nav { flex-direction: column; align-items: center; gap: 1.5rem; }
+    .hero-layout { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
+
+    /* NEU HINZUGEFÜGT */
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+}#experience {
+    /* Stellt sicher, dass die Sektion den Standardabstand hat */
+    padding: 6rem 0;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.experience-grid {
+    display: grid;
+    /* Erstellt ein flexibles 3-Spalten-Layout, das auf kleineren Bildschirmen umbricht */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+    align-items: stretch; /* Sorgt dafür, dass alle Karten dieselbe Höhe haben */
+}
+
+.experience-item {
+    background-color: var(--color-background-card);
+    border: 2px solid var(--color-border);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Wichtig, um die KPI-Box unten zu halten */
+}
+
+.experience-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.experience-context {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.experience-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.experience-item li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.experience-item li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* --- Styling für die KPI-Boxen --- */
+.kpi-box {
+    margin-top: auto; /* Schiebt die Box automatisch an das untere Ende der Karte */
+    padding-top: 1.5rem;
+    border-top: 2px solid #eee; /* Trennlinie zur oberen Beschreibung */
+}
+
+.kpi-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.kpi-value {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    background-color: var(--color-accent);
+    line-height: 1;
+    padding: 0.5rem 0.8rem;
+    min-width: 100px;
+    text-align: center;
+}
+
+.kpi-label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    line-height: 1.3;
+}
