@@ -34,7 +34,7 @@ section { padding: 6rem 0; border-bottom: 2px solid var(--color-border); }
 h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; }
 h1 { font-size: 4.5rem; }
 h2 { font-size: 3rem; margin-bottom: 3rem; text-align: center; }
-p { line-height: 1.6; max-width: 65ch; }
+p { line-height: 1.6; max-width: 65ch; font-size: 1rem; }
 .label { font-family: var(--font-mono); font-weight: 600; color: var(--color-text); margin-bottom: 1rem; display: block; }
 
 /* --- 5. Brutalist-UI-Elemente --- */
@@ -259,12 +259,20 @@ section.is-visible, footer.is-visible { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    h2, .about-intro h2 { font-size: 2.2rem; }
+    /* --- Globale Schriftanpassungen für Mobile --- */
+    h1 { font-size: 2.8rem; }
+    h2, .about-intro h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    .logo { font-size: 1.2rem; }
+    p, .experience-item li, .stack-category li { font-size: 0.95rem; }
+    .experience-item h3 { font-size: 1.6rem; }
+    .kpi-value { font-size: 2rem; }
+    .kpi-label { font-size: 0.9rem; }
+
+
     nav { flex-direction: column; align-items: center; gap: 1.5rem; }
     .hero-layout { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
     
-    /* Korrektur für das Hero-SVG auf Mobilgeräten */
     .hero-svg-container {
         max-width: 380px;
         margin: 0 auto;
@@ -274,7 +282,6 @@ section.is-visible, footer.is-visible { opacity: 1; transform: translateY(0); }
         grid-template-columns: 1fr;
     }
 
-    /* Korrektur für die Boxen in Impressum & Datenschutz */
     #impressum-section .step-content,
     #privacy-section .step-content {
         padding: 1.5rem;
