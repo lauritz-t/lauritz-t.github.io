@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thomkins-analytics.de/sitemap.xml
